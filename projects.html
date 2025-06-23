@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sohaib | Projects</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as main page) -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">MS</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Projects Header -->
+    <section class="projects-header">
+        <div class="container">
+            <h1>My Projects</h1>
+            <p>Explore my portfolio of innovative solutions and creative implementations</p>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section class="projects-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="projectSearch" placeholder="Search projects...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-grid-section">
+        <div class="container">
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2 id="modalProjectTitle">Project Title</h2>
+                <div class="project-meta">
+                    <span id="modalProjectDate" class="project-date"><i class="far fa-calendar-alt"></i> Jan 2023 - Dec 2023</span>
+                    <span id="modalProjectType" class="project-type"><i class="fas fa-tag"></i> Web Development</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="modal-col modal-col-left">
+                        <div class="project-carousel" id="projectCarousel">
+                            <!-- Project images will be loaded here -->
+                        </div>
+                        <div class="project-links">
+                            <a href="#" id="projectLiveLink" class="btn primary" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" id="projectGithubLink" class="btn secondary" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                        </div>
+                    </div>
+                    <div class="modal-col modal-col-right">
+                        <div class="project-details">
+                            <h3>Project Details</h3>
+                            <p id="modalProjectDescription">Project description goes here...</p>
+                            
+                            <div class="project-features">
+                                <h4>Key Features</h4>
+                                <ul id="modalProjectFeatures">
+                                    <!-- Features will be loaded here -->
+                                </ul>
+                            </div>
+                            
+                            <div class="project-technologies">
+                                <h4>Technologies Used</h4>
+                                <div class="tech-tags" id="modalProjectTechnologies">
+                                    <!-- Technologies will be loaded here -->
+                                </div>
+                            </div>
+                            
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <i class="fas fa-code"></i>
+                                    <div>
+                                        <h5>Lines of Code</h5>
+                                        <p id="modalProjectLOC">5,000+</p>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <h5>Users Impacted</h5>
+                                        <p id="modalProjectUsers">1,000+</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-code-samples">
+                    <h3>Code Samples</h3>
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-tab="snippet1">Main Function</button>
+                        <button class="code-tab" data-tab="snippet2">Configuration</button>
+                        <button class="code-tab" data-tab="snippet3">Utilities</button>
+                    </div>
+                    <div class="code-container">
+                        <pre class="code-sample active" id="snippet1"><code class="language-javascript">// Code will be loaded here</code></pre>
+                        <pre class="code-sample" id="snippet2"><code class="language-javascript">// Code will be loaded here</code></pre>
+                        <pre class="code-sample" id="snippet3"><code class="language-javascript">// Code will be loaded here</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant">
+        <div class="ai-avatar" id="aiAvatar"></div>
+        <div class="ai-chat">
+          <div class="ai-message">Hi! I'm your AI assistant. Ask me about Muhammad's skills or projects.</div>
+          <input type="text" placeholder="Ask me anything..." class="ai-input">
+        </div>
+    </div>
+
+    <!-- Footer (same as main page) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="index.html">MS</a>
+                    <p>AI Engineer & Full Stack Developer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="index.html#experience">Experience</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>dev.m.sohaib@gmail.com</p>
+                    <p>+92-333-6112030</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Muhammad Sohaib. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/dev-m-sohaib" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dev-m-sohaib" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

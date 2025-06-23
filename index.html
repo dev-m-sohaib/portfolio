@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sohaib | AI Engineer & Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">&lt;/&gt;M.SOHAIB</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="particles-js"></canvas>
+        <div class="container">
+            <div class="hero-content">
+                <h4 class="greeting">Hi, my name is</h4>
+                <h1 class="name">Muhammad Sohaib</h1>
+                <h2 class="title">I build <span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+                <p class="summary">Computer Science graduate passionate about Artificial Intelligence and software development. Eager to contribute technical and problem-solving skills in a dynamic environment.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="cube-animation">
+                <div class="cube">
+                    <div class="face front"><i class="fas fa-robot"></i></div>
+                    <div class="face back"><i class="fas fa-code"></i></div>
+                    <div class="face right"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="face left"><i class="fas fa-database"></i></div>
+                    <div class="face top"><i class="fas fa-brain"></i></div>
+                    <div class="face bottom"><i class="fas fa-camera"></i></div>
+                </div>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <!-- AI Assistant -->
+        <div class="ai-assistant">
+            <div class="ai-avatar" id="aiAvatar"></div>
+            <div class="ai-chat">
+              <div class="ai-message">Hi! I'm your AI assistant. Ask me about Muhammad's skills or projects.</div>
+              <input type="text" placeholder="Ask me anything..." class="ai-input">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/profile.jpg" alt="Muhammad Sohaib" class="profile-img">
+                        <div class="tech-icons">
+                            <i class="fab fa-python"></i>
+                            <i class="fab fa-js"></i>
+                            <i class="fab fa-laravel"></i>
+                            <i class="fab fa-flutter"></i>
+                            <i class="fas fa-database"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Who am I?</h3>
+                    <p>I'm a Computer Science graduate from Bahauddin Zakariya University with a passion for Artificial Intelligence and software development. I love solving complex problems and turning ideas into reality through code.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, reading about AI advancements, or capturing moments through my camera lens.</p>
+                    <div class="interests">
+                        <h4>My Interests:</h4>
+                        <div class="interest-tags">
+                            <span class="tag">AI/ML</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Web Development</span>
+                            <span class="tag">Mobile Apps</span>
+                            <span class="tag">Photography</span>
+                            <span class="tag">Gaming</span>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+            
+            <!-- <div class="timeline-container">
+                <h3>My Journey</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>BSc Computer Science</h4>
+                            <p>Bahauddin Zakariya University</p>
+                            <p>2021 - 2025</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Software Developer & Manager</h4>
+                            <p>Quality Enhancement Cell, BZU</p>
+                            <p>Sep 2023 - May 2024</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Web & App Developer</h4>
+                            <p>Soft Height Multan</p>
+                            <p>Jun 2024 - May 2025</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Deep Fake Detection Project</h4>
+                            <p>Final Year Project</p>
+                            <p>2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+     <!-- Skills Section -->
+     <section id="skills" class="skills" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skills-categories">
+                    <button class="category-btn active" data-category="all">All Skills</button>
+                    <button class="category-btn" data-category="ai">AI/ML</button>
+                    <button class="category-btn" data-category="web">Web Dev</button>
+                    <button class="category-btn" data-category="mobile">Mobile</button>
+                    <button class="category-btn" data-category="tools">Tools</button>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- AI/ML Skills -->
+                    <div class="skill-item" data-category="ai">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>AI/ML Fundamentals</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item" data-category="ai">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>TensorFlow/PyTorch</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Web Dev Skills -->
+                    <div class="skill-item" data-category="web">
+                        <div class="skill-icon">
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>PHP/Laravel</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item" data-category="web">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>JavaScript</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Skills -->
+                    <div class="skill-item" data-category="mobile">
+                        <div class="skill-icon">
+                            <i class="fab fa-flutter"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Flutter</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="skill-item" data-category="tools">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>MySQL</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-item" data-category="tools">
+                        <div class="skill-icon">
+                            <i class="fab fa-git"></i>
+                        </div>
+                        <div class="skill-info">
+                            <h3>Git</h3>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="radar-chart-container">
+                <h3>Skills Radar Chart</h3>
+                <canvas id="skillsRadarChart"></canvas>
+            </div>
+        </div>
+    </section> 
+
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience" style="padding: 0;">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-line"></div>
+                
+                <!-- Experience 1 -->
+                <div class="experience-item">
+                    <div class="experience-date">Jun 2024  May 2025</div>
+                    <div class="experience-content">
+                        <h3>Web and App Developer / QA Tester</h3>
+                        <h4>Soft Height Multan</h4>
+                        <ul>
+                            <li>Developed scalable web/mobile apps using PHP, Laravel, and Flutter with integrated APIs and secure payments.</li>
+                            <li>Built RESTful APIs, custom WordPress plugins, shortcodes, and widgets for dynamic functionality.</li>
+                            <li>Created Telegram bots to automate tasks and enhance productivity.</li>
+                            <li>Performed manual/automated QA testing and documented detailed bug reports.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="experience-item">
+                    <div class="experience-date">Sep 2023  May 2024</div>
+                    <div class="experience-content">
+                        <h3>Software Developer and Manager</h3>
+                        <h4>Quality Enhancement Cell, BZU Multan</h4>
+                        <ul>
+                            <li>Designed and developed a comprehensive online feedback platform.</li>
+                            <li>Shared the results with the departments to take action based on real student opinions.</li>
+                            <li>This system enabled the university to gain better insights into teaching quality across departments.</li>
+                            <li>Made the feedback process faster, easier, and more accurate.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="experience-item">
+                    <div class="experience-date">Jun 2024  Aug 2024</div>
+                    <div class="experience-content">
+                        <h3>Intern - Web Developer</h3>
+                        <h4>Department of Computer Science, BZU Multan</h4>
+                        <ul>
+                            <li>Managed and updated the departmental website using Django, Bootstrap, and JavaScript.</li>
+                            <li>Used Python (Pandas, SQLite) to automate faculty search and manage large academic data.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/deepfake-detection.jpg" alt="Deep Fake Detection System">
+                        <div class="project-links">
+                            <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Safeguarding Truth</h3>
+                        <p>A system against fake media using TensorFlow that detects deep fakes in audio, video, and image files.</p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>TensorFlow</span>
+                            <span>OpenCV</span>
+                            <span>Librosa</span>
+                        </div>
+                        <button class="project-details-btn" data-modal="deepfakeModal">How It Works →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/attendance-system.jpg" alt="Smart Attendance System">
+                        <div class="project-links">
+                            <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Smart Attendance System</h3>
+                        <p>Python application using face recognition to automate student attendance.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>Face Recognition</span>
+                            <span>SQLite</span>
+                        </div>
+                        <button class="project-details-btn" data-modal="attendanceModal">How It Works →</button>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/feedback-system.jpg" alt="University Feedback System">
+                        <div class="project-links">
+                            <a href="#" class="link-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="link-icon"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>University Feedback System</h3>
+                        <p>Comprehensive online feedback platform for BZU Multan.</p>
+                        <div class="project-tech">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <button class="project-details-btn" data-modal="feedbackModal">How It Works →</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="view-more">
+                <a href="projects.html" class="btn secondary">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements container">
+        <h3 class="section-title">Achievements</h3>
+        <div class="achievement-grid">
+          <div class="achievement" data-id="fyp-win">
+            <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+            <h4>Code and Clash Champion</h4>
+            <p>Secured first position in university FYP exhibition event "Code and Clash"</p>
+          </div>
+          <div class="achievement" data-id="workshop">
+            <div class="achievement-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Workshop Organizer</h4>
+            <p>Received Shield for organizing a workshop in Website Development.</p>
+          </div>
+          <div class="achievement" data-id="society-head">
+            <div class="achievement-icon"><i class="fas fa-users-cog"></i></div>
+            <h4>Web Society Head</h4>
+            <p>Received Shield from department for serving as a web society head.</p>
+          </div>
+          <div class="achievement" data-id="qec-letter">
+            <div class="achievement-icon"><i class="fas fa-envelope-open-text"></i></div>
+            <h4>Appreciation QEC</h4>
+            <p>Received an appreciation letter from Quality Enhancement Cell BZU.</p>
+          </div>
+          <div class="achievement" data-id="employee-month">
+            <div class="achievement-icon"><i class="fas fa-award"></i></div>
+            <h4>Employee of the Month</h4>
+            <p>Best Employee of the Month, Soft Height (Jan 2025).</p>
+          </div>
+        </div>
+      </section>
+
+    <!-- Deepfake Modal -->
+    <div id="deepfakeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Safeguarding Truth: Deep Fake Detection System</h2>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <h3>Project Overview</h3>
+                        <p>Developed a cross-platform mobile application capable of detecting deep fake media using advanced machine learning techniques. The system provides immediate feedback to users with a report on the authenticity of uploaded media.</p>
+                        <ul>
+                            <li>Used TensorFlow and Keras for model development</li>
+                            <li>Implemented OpenCV for video frame extraction</li>
+                            <li>Utilized Librosa for audio feature extraction</li>
+                            <li>Trained on multiple datasets including 140K Real/Fake Faces</li>
+                        </ul>
+                    </div>
+                    <div class="modal-col">
+                        <img src="images/deepfake-detection.jpg" alt="Deep Fake Detection System">
+                    </div>
+                </div>
+                
+                <div class="demo-section">
+                    <h3>Try the Deepfake Detection Demo</h3>
+                    <div class="demo-container">
+                        <div class="upload-area" id="deepfakeUploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Drag & drop media file or click to browse</p>
+                            <input type="file" id="deepfakeFileInput" accept="image/*,video/*,audio/*">
+                        </div>
+                        <div class="analysis-result">
+                            <div class="media-preview" id="deepfakeMediaPreview"></div>
+                            <div class="result-graph">
+                                <canvas id="deepfakeAnalysisChart"></canvas>
+                            </div>
+                            <div class="result-text">
+                                <h4>Analysis Result: <span class="verdict">Unknown</span></h4>
+                                <p class="confidence">Upload a file to check authenticity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Attendance System Modal -->
+    <div id="attendanceModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Smart Attendance System</h2>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <h3>Project Overview</h3>
+                        <p>An automated attendance system that uses facial recognition to mark student attendance, eliminating manual processes and reducing errors.</p>
+                        <ul>
+                            <li>Implemented face detection and recognition algorithms</li>
+                            <li>Created a database to store student information and attendance records</li>
+                            <li>Developed a user-friendly interface for teachers</li>
+                            <li>Generated attendance reports automatically</li>
+                        </ul>
+                    </div>
+                    <div class="modal-col">
+                        <img src="images/attendance-system.jpg" alt="Smart Attendance System">
+                    </div>
+                </div>
+                
+                <div class="demo-section">
+                    <h3>Face Recognition Demo</h3>
+                    <div class="attendance-demo">
+                        <div class="camera-container">
+                            <video id="attendanceVideo" width="400" height="300" autoplay></video>
+                            <canvas id="attendanceCanvas" width="400" height="300"></canvas>
+                        </div>
+                        <div class="attendance-controls">
+                            <button id="startCamera" class="btn primary">Start Camera</button>
+                            <button id="captureFace" class="btn secondary" disabled>Capture Face</button>
+                            <button id="markAttendance" class="btn primary" disabled>Mark Attendance</button>
+                        </div>
+                        <div class="attendance-results">
+                            <h4>Attendance Log:</h4>
+                            <ul id="attendanceLog"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback System Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>University Feedback System</h2>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <h3>Project Overview</h3>
+                        <p>Designed and developed a comprehensive online feedback platform for Bahauddin Zakariya University to collect and analyze student feedback on teaching quality.</p>
+                        <ul>
+                            <li>Enabled the university to gain better insights into teaching quality</li>
+                            <li>Shared results with departments for data-driven improvements</li>
+                            <li>Made the feedback process faster, easier, and more accurate</li>
+                            <li>Implemented data visualization for feedback analysis</li>
+                        </ul>
+                    </div>
+                    <div class="modal-col">
+                        <img src="images/feedback-system.jpg" alt="University Feedback System">
+                    </div>
+                </div>
+                
+                <div class="demo-section">
+                    <h3>Feedback System Demo</h3>
+                    <div class="feedback-demo">
+                        <div class="feedback-form">
+                            <h4>Submit Feedback</h4>
+                            <form id="demoFeedbackForm">
+                                <div class="form-group">
+                                    <label for="demoCourse">Course:</label>
+                                    <select id="demoCourse" required>
+                                        <option value="">Select a course</option>
+                                        <option value="CS-101">CS-101: Introduction to Programming</option>
+                                        <option value="AI-301">AI-301: Machine Learning</option>
+                                        <option value="WEB-202">WEB-202: Web Development</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Rating:</label>
+                                    <div class="rating-stars">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                    </div>
+                                    <input type="hidden" id="demoRating" value="0" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="demoComments">Comments:</label>
+                                    <textarea id="demoComments" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn primary">Submit Feedback</button>
+                            </form>
+                        </div>
+                        <div class="feedback-results">
+                            <h4>Feedback Analysis</h4>
+                            <div class="feedback-chart">
+                                <canvas id="feedbackChart"></canvas>
+                            </div>
+                            <div class="feedback-stats">
+                                <div class="stat-item">
+                                    <h5>Total Feedback</h5>
+                                    <p id="totalFeedback">0</p>
+                                </div>
+                                <div class="stat-item">
+                                    <h5>Average Rating</h5>
+                                    <p id="averageRating">0.0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>dev.m.sohaib@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+92-333-6112030</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Multan, Pakistan</span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/dev-m-sohaib" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dev-m-sohaib" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                    
+                    <div class="telegram-bot">
+                        <h4>Quick Message via Telegram</h4>
+                        <button id="telegram-btn" class="btn secondary">
+                            <i class="fab fa-telegram-plane"></i> Message Me
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">&lt;/&gt;M.SOHAIB</a>
+                    <p>AI Engineer & Full Stack Developer</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>dev.m.sohaib@gmail.com</p>
+                    <p>+92-333-6112030</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Muhammad Sohaib. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://github.com/dev-m-sohaib" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/dev-m-sohaib" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/projectModals.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+</body>
+</html>
