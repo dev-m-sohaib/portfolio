@@ -1,0 +1,101 @@
+[
+    {
+        "id": "deepfake-detection",
+        "title": "Safeguarding Truth: Deep Fake Detection",
+        "shortDescription": "A system against fake media using TensorFlow that detects deep fakes in audio, video, and image files.",
+        "description": "Developed a cross-platform mobile application capable of detecting deep fake media using advanced machine learning techniques. The system provides immediate feedback to users with a report on the authenticity of uploaded media.",
+        "type": "AI/ML Project",
+        "tags": ["ai", "mobile"],
+        "startDate": "Jan 2024",
+        "endDate": "May 2025",
+        "images": [
+            "images/deepfake-detection.jpg"
+        ],
+        "githubUrl": "https://github.com/dev-m-sohaib/deepfake-detection",
+        "features": [
+            "Detects deep fakes in audio, video, and image files",
+            "Uses TensorFlow and Keras for model development",
+            "Implements OpenCV for video frame extraction",
+            "Utilizes Librosa for audio feature extraction",
+            "Trained on multiple datasets including 140K Real/Fake Faces"
+        ],
+        "technologies": ["Flutter", "TensorFlow", "OpenCV", "Librosa", "Python", "Dart"],
+        "linesOfCode": "15,000+",
+        "usersImpacted": "500+",
+        "codeSamples": [
+            {
+                "language": "python",
+                "code": "# Model Architecture\nimport tensorflow as tf\nfrom tensorflow.keras import layers\n\ndef create_model(input_shape):\n    model = tf.keras.Sequential([\n        layers.Conv2D(32, (3,3), activation='relu', input_shape=input_shape),\n        layers.MaxPooling2D((2,2)),\n        layers.Conv2D(64, (3,3), activation='relu'),\n        layers.MaxPooling2D((2,2)),\n        layers.Flatten(),\n        layers.Dense(64, activation='relu'),\n        layers.Dense(1, activation='sigmoid')\n    ])\n    \n    model.compile(optimizer='adam',\n                loss='binary_crossentropy',\n                metrics=['accuracy'])\n    \n    return model"
+            },
+            {
+                "language": "dart",
+                "code": "// Flutter UI for results\nclass ResultScreen extends StatelessWidget {\n  final AnalysisResult result;\n  \n  const ResultScreen({Key? key, required this.result}) : super(key: key);\n\n  @override\n  Widget build(BuildContext context) {\n    return Scaffold(\n      appBar: AppBar(title: Text('Analysis Result')),\n      body: Padding(\n        padding: const EdgeInsets.all(16.0),\n        child: Column(\n          children: [\n            ResultIndicator(isFake: result.isFake),\n            SizedBox(height: 20),\n            Text(\n              result.isFake ? 'Fake Content Detected' : 'Authentic Content',\n              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),\n            ),\n            SizedBox(height: 10),\n            Text('Confidence: ${(result.confidence * 100).toStringAsFixed(1)}%'),\n            // More result details...\n          ],\n        ),\n      ),\n    );\n  }\n}"
+            }
+        ]
+    },
+    {
+        "id": "smart-attendance",
+        "title": "Smart Attendance System",
+        "shortDescription": "Python application using face recognition to automate student attendance.",
+        "description": "An automated attendance system that uses facial recognition to mark student attendance, eliminating manual processes and reducing errors. The system includes a database to store student information and attendance records, with a user-friendly interface for teachers and automatic report generation.",
+        "type": "Automation Project",
+        "tags": ["ai", "automation"],
+        "date": "Sep 2023 - Dec 2023",
+        "images": [
+            "images/attendance-system.jpg" 
+        ],
+        "githubUrl": "https://github.com/dev-m-sohaib/smart-attendance",
+        "features": [
+            "Face detection and recognition algorithms",
+            "Database for student information and attendance records",
+            "User-friendly interface for teachers",
+            "Automatic attendance reports",
+            "Real-time recognition with high accuracy"
+        ],
+        "technologies": ["Python", "OpenCV", "Face Recognition", "SQLite", "Tkinter"],
+        "linesOfCode": "8,000+",
+        "usersImpacted": "200+",
+        "codeSamples": [
+            {
+                "language": "python",
+                "code": "# Face recognition function\nimport face_recognition\nimport cv2\nimport numpy as np\n\ndef recognize_faces():\n    # Load known faces\n    known_face_encodings = []\n    known_face_names = []\n    \n    # Initialize video capture\n    video_capture = cv2.VideoCapture(0)\n    \n    while True:\n        # Grab frame from video\n        ret, frame = video_capture.read()\n        \n        # Find all face locations and encodings\n        face_locations = face_recognition.face_locations(frame)\n        face_encodings = face_recognition.face_encodings(frame, face_locations)\n        \n        # Compare with known faces\n        for face_encoding in face_encodings:\n            matches = face_recognition.compare_faces(known_face_encodings, face_encoding)\n            name = \"Unknown\"\n            \n            # Use the known face with the smallest distance\n            face_distances = face_recognition.face_distance(known_face_encodings, face_encoding)\n            best_match_index = np.argmin(face_distances)\n            if matches[best_match_index]:\n                name = known_face_names[best_match_index]\n                \n            # Mark attendance for recognized student\n            mark_attendance(name)\n        \n        # Display results (for demo)\n        cv2.imshow('Video', frame)\n        \n        # Exit on 'q' key\n        if cv2.waitKey(1) & 0xFF == ord('q'):\n            break\n    \n    # Release resources\n    video_capture.release()\n    cv2.destroyAllWindows()"
+            }
+        ]
+    },
+    {
+        "id": "university-feedback",
+        "title": "University Feedback System",
+        "shortDescription": "Comprehensive online feedback platform for BZU Multan.",
+        "description": "Designed and developed a comprehensive online feedback platform for Bahauddin Zakariya University to collect and analyze student feedback on teaching quality. The system enabled the university to gain better insights into teaching quality across departments and made the feedback process faster, easier, and more accurate.",
+        "type": "Web Development",
+        "tags": ["web", "automation"],
+        "date": "Sep 2023 - May 2024",
+        "images": [
+            "images/feedback-system.jpg",
+            "images/projects/feedback-system-2.jpg",
+            "images/projects/feedback-system-3.jpg"
+        ],
+        "githubUrl": "https://github.com/dev-m-sohaib/university-feedback",
+        "liveUrl": "https://feedback.bzu.edu.pk",
+        "features": [
+            "Online feedback collection platform",
+            "Data visualization for analysis",
+            "Department-specific reporting",
+            "Automated result sharing",
+            "Secure authentication system"
+        ],
+        "technologies": ["PHP", "Laravel", "MySQL", "JavaScript", "Chart.js"],
+        "linesOfCode": "25,000+",
+        "usersImpacted": "5,000+",
+        "codeSamples": [
+            {
+                "language": "php",
+                "code": "<?php\n// Feedback Controller\nnamespace App\\Http\\Controllers;\n\nuse Illuminate\\Http\\Request;\nuse App\\Models\\Feedback;\nuse App\\Models\\Course;\n\nclass FeedbackController extends Controller\n{\n    public function store(Request $request)\n    {\n        $validated = $request->validate([\n            'course_id' => 'required|exists:courses,id',\n            'rating' => 'required|integer|between:1,5',\n            'comments' => 'nullable|string|max:500'\n        ]);\n        \n        // Add student ID from auth\n        $validated['student_id'] = auth()->id();\n        \n        // Create feedback\n        $feedback = Feedback::create($validated);\n        \n        // Update course statistics\n        $course = Course::find($validated['course_id']);\n        $course->updateStatistics();\n        \n        return response()->json([\n            'success' => true,\n            'message' => 'Feedback submitted successfully'\n        ]);\n    }\n}"
+            },
+            {
+                "language": "javascript",
+                "code": "// Feedback chart rendering\nfunction renderFeedbackChart(courseId) {\n    fetch(`/api/feedback/${courseId}`)\n        .then(response => response.json())\n        .then(data => {\n            const ctx = document.getElementById('feedbackChart').getContext('2d');\n            \n            new Chart(ctx, {\n                type: 'bar',\n                data: {\n                    labels: ['Excellent', 'Good', 'Average', 'Poor', 'Very Poor'],\n                    datasets: [{\n                        label: 'Feedback Ratings',\n                        data: [\n                            data.excellent,\n                            data.good,\n                            data.average,\n                            data.poor,\n                            data.very_poor\n                        ],\n                        backgroundColor: [\n                            '#4CAF50',\n                            '#8BC34A',\n                            '#FFC107',\n                            '#FF9800',\n                            '#F44336'\n                        ]\n                    }]\n                },\n                options: {\n                    scales: {\n                        y: { beginAtZero: true }\n                    }\n                }\n            });\n        });\n}"
+            }
+        ]
+    }
+]
